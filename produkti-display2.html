@@ -1,0 +1,133 @@
+
+    <link rel="stylesheet" href="css/produkti-display2.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+
+<div class="carousell">
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="5000">
+                <div class="overlay-image" onclick="fullSize()" style="background-image: url(images/testitem.jpg);"></div>
+            </div>
+    
+            <div class="carousel-item" data-interval="5000">
+                <div class="overlay-image" onclick="fullSize()" style="background-image: url(images/1080-660.jfif);"></div>
+            </div>
+    
+            <div class="carousel-item" data-interval="5000">
+                <div class="overlay-image" onclick="fullSize()" style="background-image: url(images/1080-1080.jpg);"></div>
+            </div>
+        </div>
+        <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+            <span class="sr-only">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        
+        <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+            <span class="sr-only">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+
+</div>
+
+    <div class="name">
+        <h4>This is the products name and can be how long we want it to be fir asdjk asjkdha jkafjkhajksdh kajdkljae </h4>
+        <p class="price">€1999.99 <span>  €2999.99</span></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos harum animi maiores quisquam repellendus ea!</p>
+        <button class='more-details'>Më shumë detaje</button>
+        <h5>Transporti: <span>Falas</span></h5>
+    
+        <div class="social-buttons">
+            <a href="#"><img src="images/2111463.png" alt="Instagram"></a>
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/3046121.png" alt="Tiktok"></a>
+        </div>
+
+        <div class="quantity">
+            <span class="minus">-</span>
+            <input type="number" value="1">
+            <span class="plus">+</span>
+        </div>
+
+        <div class="total">
+            <p>€ 1999.99</p>
+        </div>
+
+
+        <div class="buttons">
+            <button>Shto në shportë</button>
+            <button class="right">Blej tani</button>
+            <button class="heart"><i class="fa-solid fa-heart fa-2x"></i><span>120</span></button>
+        </div>
+    </div>
+    
+    <div class="show-more-details">
+        <table style="width: 100%">
+            <!--Repeated Row-->
+            <tr class="table-row">
+                <td><span>Detaji 1</span> </td>
+                <td>Produkti nuk eshte ne stok me </td>
+            </tr>
+            <!--Repeated Row-->
+            <!--Repeated Row-->
+            <tr class="table-row">
+                <td><span>Detaji 1</span> </td>
+                <td>Produkti nuk eshte ne stok me </td>
+            </tr>
+            <!--Repeated Row-->
+        </table>
+    </div>
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script>
+    function fullSize() {
+        const getslide = document.querySelector('.carousell')
+        getslide.classList.toggle('makeitfullsize')
+    }
+
+    //Quantity input
+    $(document).ready(function() {
+        $('.minus').click(function () {
+            var $input = $(this).parent().find('input');
+            var count = parseInt($input.val()) - 1;
+            count = count < 1 ? 1 : count;
+            $input.val(count);
+            $input.change();
+            return false;
+        });
+        $('.plus').click(function () {
+            var $input = $(this).parent().find('input');
+            $input.val(parseInt($input.val()) + 1);
+            $input.change();
+            return false;
+        });
+    });
+
+
+    //Scroll Down to details
+    var elmntToView = document.querySelector('.show-more-details')
+    const buttonclicked = document.querySelector(".more-details")
+
+    buttonclicked.addEventListener('click', () => {
+        elmntToView.scrollIntoView({behavior:"smooth", block: 'start'});
+    })
+    
+
+</script>
+
+
+
+

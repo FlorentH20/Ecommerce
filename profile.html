@@ -1,0 +1,120 @@
+  
+<link rel="stylesheet" href="css/profile.css">
+
+<h2 class="user-name">Emri dhe Mbiemri</h2>
+
+
+
+<div class="komplet-profili">
+    <div class="menuja-majtas">
+        <button class="ndrysho-profilin">
+            Profili
+        </button>
+        <a href="#">
+            <button class="porosite-ne-procesim">
+                Porositë në procesim
+            </button>
+        </a>
+        <a href="#">
+            <button class="porosite-e-perfunduara">
+                Porositë e përfunduara
+            </button>
+        </a>
+        <a href="#">
+            <button class="porosite-e-anuluara">
+                Porositë e anuluara
+            </button>
+        </a>
+        <a href="#">
+            <button class="porosite-e-kthyera">
+                Porositë e kthyera
+            </button>
+        </a>
+        <a href="#">
+            <button class="tracking">
+                Track/Gjurmo
+            </button>
+        </a>
+
+    </div>
+
+    <div class="ndrysho-profilin-view">
+        <div class="emri">
+            <p>Emri:</p>
+            <div class="all-view emri-view">
+                <p>Florenasdat Hotasdai</p>
+                <button class="lapsi ndrysho-emrin"><i class="fa-solid fa-pencil"></i></button>
+            </div>
+            <form action="#" class="emri-form">
+                <input type="text">
+                <button class="lapsi" type="submit"><i class="fa-solid fa-check"></i></button>
+            </form>
+        </div>
+        <div class="emri">
+            <p>Email:</p>
+            <div class="all-view">
+                <p>f**20@gmail.com</p>
+                <button class="lapsi ndrysho-email"><i class="fa-solid fa-pencil"></i></button>
+            </div>
+            <form action="#" class="email-form">
+                <input type="email"required oninvalid="this.setCustomValidity('Ju lutem shtypni një email valid')">
+                <button class="lapsi" type="submit"><i class="fa-solid fa-check"></i></button>
+            </form>
+        </div>
+
+        <div class="emri">
+            <p>Nr Telefonit:</p>
+            <div class="all-view">
+                <p>+38343738305</p>
+                <button class="lapsi ndrysho-tel"><i class="fa-solid fa-pencil"></i></button>
+            </div>
+            <form action="#" class="tel-form">
+                <input type="text">
+                <button class="lapsi" type="submit"><i class="fa-solid fa-check"></i></button>
+            </form>
+        </div>
+
+        <div class="emri">
+            <p>Fjalëkalimi:</p>
+            <div class="all-view">
+                <button class="lapsi ndrysho-passw"><i class="fa-solid fa-pencil"></i></button>
+            </div>
+        </div>
+        <form action="#" class="password-form">
+            <input type="password">
+            <p>Konfirmo fjalëkalimin</p>
+            <input type="password">
+            <button class="lapsi" type="submit"><i class="fa-solid fa-check"></i></button>
+        </form>
+
+    </div>
+    </div>
+</div>
+
+
+<script>
+    const ndryshoemrin = document.querySelector('.ndrysho-emrin')
+    const ndryshoemail = document.querySelector('.ndrysho-email')
+    const ndryshotel = document.querySelector('.ndrysho-tel')
+    const ndryshopassw = document.querySelector('.ndrysho-passw')
+
+    ndryshoemrin.addEventListener('click', () => {
+        const shkruajemrin = document.querySelector('.emri-form')
+        shkruajemrin.classList.toggle('shfaq')
+    })
+
+    ndryshoemail.addEventListener('click', () => {
+        const shkruajemail = document.querySelector('.email-form')
+        shkruajemail.classList.toggle('shfaq')
+    })
+
+    ndryshotel.addEventListener('click', () => {
+        const shkruajtel = document.querySelector('.tel-form')
+        shkruajtel.classList.toggle('shfaq')
+    })
+
+    ndryshopassw.addEventListener('click', () => {
+        const shkruajpassw = document.querySelector('.password-form')
+        shkruajpassw.classList.toggle('shfaq')
+    })
+</script>

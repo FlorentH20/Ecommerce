@@ -1,0 +1,181 @@
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/glide.core.css">
+
+
+
+<div class="slider">
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide"><img src="images/default-image.jpg" alt=""></li>
+                <li class="glide__slide"><img src="images/c449c8c0cd52dad09ed39e5c2815e0798bb14eeeab40d0f63c3439551027788c41547f8aacdf8b51f2b41478d9ac58e8bbc2de19f0e5f31ca97da0_1280.jpg" alt=""></li>
+                <li class="glide__slide"><img src="images/default-image.jpg" alt=""></li>
+            </ul>
+        </div>
+        <!--Shigjetat per next prev-->
+        <!--
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+        </div> -->
+    </div>
+ </div>
+
+<div class="categories">
+    <div class="open-nav2">
+        <img src="images/menu-logo.png" alt="Open Categories">
+        <h3>Kategorite</h3>
+    </div>
+
+    <div class="nav2">
+        <nav>
+            <img src="images/x.svg" alt="" class="close-nav2" alt="Close Categories">
+            <ul >
+                <li><a href="#">Kategoria yssszy</a></li>
+                <li><a href="#">Kategoria x</a></li>
+                <li><a href="#">Kategoria X</a></li>
+                <li><a href="#">Kategoria X</a></li>
+                <li><a href="#">Kategoria X</a></li>
+                <li><a href="#">Kategoria X</a></li>
+                <li><a href="#">Kategoria xz</a></li>
+                <li><a href="#">Kategoria X</a></li>
+                <li><a href="#">Kategoria X</a></li>
+                <li><a href="#">Kategoria X</a></li>
+
+                
+                
+            </ul>
+        </nav>
+    </div>
+   
+</div>
+
+
+<div class="shop-items">
+
+    <ul>
+    <!-- Repeated Item -->
+        <li>
+            <a href="#"><img src="images/7149748.png" alt="Foto e produktit"></a>
+            <button class="name"><a href='#'>Në gjendje msfasfe  asad i miri ne treg</a></button>
+            <p class="price">2999.99€ <span>3999.99€</span></p>
+            <div class="social-buttons">
+                <button ><a href='https/www.instagram.com'><img src="images/3046121.png" alt=""></a></button>
+                <button ><a href='https/www.instagram.com'><img src="images/2111463.png" alt=""></a></button>
+            </div>
+    
+            <div class="buttons">
+                <button class="details"><a href="#">Shiko Detajet</a></button>
+                <button class="middle"><img src="images/8.png" alt=""></button>
+                <button class="right" id="right"><img src="images/heart.png" alt=""></button>
+            </div>
+        </li>
+        <!--End of repeated item-->
+
+        <!-- Repeated Item -->
+        <li>
+            <a href="#"><img src="images/7149748.png" alt="Foto e produktit"></a>
+            <button class="name"><a href='#'>Në ne ne en nene nene gjendje msfasfe  asad i miri ne treg</a></button>
+            <p class="price">2999.99€ <span>3999.99€</span></p>
+            <div class="social-buttons">
+                <button ><a href='https/www.instagram.com'><img src="images/3046121.png" alt=""></a></button>
+                <button ><a href='https/www.instagram.com'><img src="images/2111463.png" alt=""></a></button>
+            </div>
+    
+            <div class="buttons">
+                <button class="details"><a href="#">Shiko Detajet</a></button>
+                <button class="middle"><img src="images/8.png" alt=""></button>
+                <button class="right" id="right"><img src="images/heart.png" alt=""></button>
+            </div>
+        </li>
+        <!--End of repeated item-->
+    </ul>
+    <button class="see-more-products">Shfaq më shumë produkte</button>
+
+    <div class="addedsuccess">
+        <h4>Produkti është shtuar në shportë</h4>
+        <div class="vazhdimet">
+            <button class="hapshporten">Hap shportën</button>
+            <button class="vazhdoblerjen">Vazhdo Blerjen</button>
+        </div>
+    </div>
+
+    <div class="addedsucesstowish">
+        <p>Produkti është shtuar në listën e pëlqimeve</p>
+    </div>
+
+    
+
+</div>
+
+<!--This is Home-->
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<script>
+    const config = {
+        type: 'carousel',
+        draggable: true,
+        autoplay: 10000,
+        animationDuration: 1000,
+        
+    }
+
+    new Glide('.glide', config).mount()
+
+    
+</script>
+<script>
+    //Hap dhe mbyll navigacionin e homes
+    const menu2 = document.querySelector('.open-nav2')
+    const close2 = document.querySelector('.close-nav2')
+    nav2 = document.querySelector('.nav2')
+
+    menu2.addEventListener('click', () => {
+    nav2.classList.add('nav2-opennav')
+    })
+
+    close2.addEventListener('click', () => {
+        nav2.classList.remove('nav2-opennav')
+    })
+
+    var specifiedElement3 = menu2;
+    var specifiedElement4 = nav2;
+    document.addEventListener('click', function(event) {
+        var isClickInside = specifiedElement3.contains(event.target);
+        var isClickInside2 = specifiedElement4.contains(event.target);
+        if (!isClickInside && !isClickInside2) {
+                nav2.classList.remove('nav2-opennav')
+        }
+    });
+
+
+    //Hap dhe mbyll Produkti eshte shtuar ne shporte
+    const vazhdoblerjen = document.querySelector('.addedsuccess');
+    const shportat = document.getElementsByClassName('middle')
+    
+
+    for(zemra=0; zemra<shportat.length; zemra++){
+        shportat[zemra].addEventListener('click', () => {
+            vazhdoblerjen.style.display = 'block';
+                var vazhdo = document.querySelector('.vazhdoblerjen');
+
+            vazhdo.addEventListener('click', ()=> {
+                vazhdoblerjen.style.display = 'none';
+            })
+        
+        })
+    }
+
+    var hapshporten = document.querySelector('.hapshporten');
+    document.addEventListener('click', function(event){
+        var isClickInside3 = hapshporten.contains(event.target);
+        if (isClickInside3){
+            nav.classList.remove('open-nav')
+        }
+    })
+    hapshporten.addEventListener('click', () => {
+            nav.classList.add('open-nav')
+            vazhdoblerjen.style.display = 'none';
+        })
+
+</script>
+<!-- This is Home -->
