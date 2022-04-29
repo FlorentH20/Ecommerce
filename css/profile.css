@@ -1,0 +1,124 @@
+h2 {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.komplet-profili {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5em;
+  margin-right: .5em;
+}
+
+.komplet-profili .menuja-majtas {
+  display: inline-block;
+  width: 200px;
+}
+
+.komplet-profili .menuja-majtas button {
+  font-family: inherit;
+  font-weight: bold;
+  height: 4em;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  color: rgba(19, 18, 18, 0.731);
+}
+
+.komplet-profili .menuja-majtas button:hover {
+  background: gray;
+  color: white;
+}
+
+.komplet-profili .menuja-majtas .ndrysho-profilin {
+  border-top-right-radius: 25px;
+}
+
+.komplet-profili .menuja-majtas .tracking {
+  border-bottom-right-radius: 25px;
+}
+
+.komplet-profili .ndrysho-profilin-view {
+  margin-left: 2em;
+  width: 200px;
+}
+
+.komplet-profili .ndrysho-profilin-view p {
+  margin: .5em;
+}
+
+.komplet-profili .ndrysho-profilin-view .all-view {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.komplet-profili .ndrysho-profilin-view input {
+  height: 1.5em;
+  outline: none;
+}
+
+.komplet-profili .ndrysho-profilin-view .lapsi {
+  margin-top: .5em;
+  margin-right: .5em;
+  border: none;
+  padding: .5em .75em;
+  border-radius: .25em;
+  color: black;
+  cursor: pointer;
+  height: 2em;
+}
+
+.komplet-profili .ndrysho-profilin-view .lapsi:hover {
+  background: gray;
+}
+
+.komplet-profili .ndrysho-profilin-view .fjalekalimi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1em;
+}
+
+.komplet-profili .shfaq {
+  display: block;
+}
+
+.komplet-profili .ndrysho-passw {
+  margin: 1em;
+}
+
+.komplet-profili form {
+  display: none;
+}
+
+.komplet-profili form input {
+  height: 1.5em;
+  margin-left: .5em;
+}
+
+.komplet-profili form button {
+  margin-left: .5em;
+}
+
+.fshih {
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  .emri {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 775px) {
+  .emri {
+    width: 1500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: .75em 0;
+  }
+}
+/*# sourceMappingURL=profile.css.map */

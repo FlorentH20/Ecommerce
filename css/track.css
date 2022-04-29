@@ -1,0 +1,59 @@
+.track {
+  text-align: center;
+}
+
+.track h3 {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.track .larti i {
+  color: black;
+}
+
+.track form {
+  display: inline-block;
+}
+
+.track .forma {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1em;
+  margin-top: 2em;
+  border: 1px solid black;
+  border-radius: .1em;
+}
+
+.track .forma input {
+  font-size: larger;
+  outline: none;
+  padding-left: .5em;
+  height: 1.5em;
+  border: none;
+}
+
+.track .forma button {
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
+.track .forma button:hover {
+  background: rgba(255, 255, 255, 0);
+}
+
+.track .forma i {
+  color: black;
+}
+
+.track .forma .fa-hashtag {
+  color: rgba(0, 123, 255, 0.775);
+  margin-top: .5em;
+  margin-left: .5em;
+}
+
+.track .informacionet {
+  margin-bottom: 3em;
+}
+/*# sourceMappingURL=track.css.map */

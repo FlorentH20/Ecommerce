@@ -1,0 +1,107 @@
+
+
+h2 {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.komplet-profili {
+    display: flex;
+    margin-bottom: 5em;
+    margin-right: .5em;
+
+    .menuja-majtas {
+        display: inline-block;
+        width: 200px;
+        button {
+            font-family: inherit;
+            font-weight: bold;
+            height: 4em;
+            width: 100%;
+            cursor:pointer;
+            border: none;
+            color: rgba(19, 18, 18, 0.731);
+        }
+        button:hover {
+            background: gray;
+            color: white;
+        }
+        .ndrysho-profilin {
+            border-top-right-radius: 25px;
+        }
+        .tracking {
+            border-bottom-right-radius: 25px;
+        }
+    }
+    .ndrysho-profilin-view {
+        margin-left: 2em;
+        width: 200px;
+        p {
+            margin: .5em;
+        }
+        .all-view {
+            display: inline-flex;
+        }
+        input {
+            height: 1.5em;
+            outline: none;
+        }
+        
+        .lapsi {
+            margin-top: .5em;
+            margin-right: .5em;
+            border: none;
+            padding: .5em .75em;
+            border-radius: .25em;
+            color: black;
+            cursor: pointer;
+            height: 2em;
+        }
+        .lapsi:hover{ 
+            background: gray;
+        }
+
+        .fjalekalimi {
+            display: flex;
+            margin-top: 1em;
+        }
+    }
+
+    .shfaq {
+        display: block;
+    }
+
+    .ndrysho-passw {
+        margin: 1em;
+    }
+    
+
+    form {
+        display: none;
+        input {
+            height: 1.5em;
+            margin-left: .5em;
+        }
+        button {
+            margin-left: .5em;
+        }
+    }
+}
+.fshih {
+    display: none;
+}
+
+@media screen and(min-width: 500px) {
+    .emri {
+        width: 500px;
+    }
+}
+
+@media screen and (min-width: 775px) {
+    .emri {
+        width: 1500px;
+        display: flex;
+        padding: .75em 0;
+    }
+}
+

@@ -1,0 +1,337 @@
+:root {
+    --heightsize: 20em;
+    --heightzoomedsize: 22em;
+    --heightsizepz: 25em;
+    --heightzoomedsizepz: 35em; 
+    --black: #191919;
+    --white: #ffffff;
+    --gray: #ffffff9f;
+    --graydarker: #A9A9A9;
+    --graydarkest: #3a3b3c;
+    --graylight: #F5F5F5;
+    --graylighter: #ececec;
+    --redheart: #E74C3C;
+    --yellowbutton: #fdc54b;
+}
+
+.carousell {
+    margin-top: 2em;
+    pointer-events: auto;
+    touch-action: pan-y;
+    width: 100%;
+    touch-action: pan-y pinch-zoom;
+    cursor: crosshair;
+
+    .carousel-indicators {
+        z-index: 0;
+    }
+}
+.carousel-item {
+    height: var(--heightsize);
+    background: #777;
+    color: white;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+
+    .container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-bottom: 50px;
+    }
+
+    .overlay-image {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+
+.makeitfullsize {
+    margin-top: 0;
+    top: 0;
+    position: fixed;
+    padding-top: 10em;
+    z-index: 9999;
+    background: black;
+    height: 100%;
+    .carousel-item {
+        height: var(--heightzoomedsize);
+    }
+
+    .carousel-indicators {
+        z-index: 1;
+    }
+}
+
+
+.name {
+    margin: 1em;
+    h4 {
+        color: var(--black);
+    }
+    .price {
+        color: var(--graydarkest);
+        font-weight: bold;
+        padding: .5em;
+        border-radius: .2em;
+        font-size: larger;
+
+        span {
+            font-size: smaller;
+            text-decoration: line-through;
+            font-weight: lighter;
+        }
+    }
+
+    .more-details {
+        background: none;
+        border: none;
+        font-family: inherit;
+        color: var(--black);
+        text-decoration: underline;
+        font-size: medium;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    h5 {
+        font-size: large;
+        margin:.5em 0;
+        margin-top: 1em;
+        color: var(--graydarkest);
+        span {
+            margin-left: .5em;
+            color: var(--yellowbutton);
+        }
+    }
+
+    .social-buttons {
+        margin-top: 0;
+        img {
+            width: 1.5em;
+            margin-right: .5em;
+            padding: .5em;
+            border-radius: .2em;
+            background-color: var(--graylighter);
+        }
+
+        img:hover {
+            background-color: var(--graydarker);
+        }
+    }
+
+    .quantity {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        display: flex;
+        span {
+            cursor:pointer;
+        }
+        
+		.minus, .plus{
+            font-weight: bold;
+            font-size: 700;
+            padding: 0.5em .5em 0 .5em;
+            color: var(--graydarkest);
+            background-color: var(--graylight);
+
+		}
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none; 
+        }
+		input{
+			height: 2em;
+            font-size: larger;
+            background: var(--graylight);
+            width: 2em;
+            border-radius: 0;
+            border: none;
+            color: var(--graydarkest);
+            text-align: center;
+        }
+        input:focus {
+            outline: none;
+        }
+
+    }
+
+    .total {
+        margin-top: -1em;
+        margin-bottom: 2em;
+    }
+
+
+    .buttons {
+        display: flex;
+        margin-top: 1em;
+        margin-left: -.5em;
+        margin-bottom: 4em;
+        button {
+            margin: 0 .5em;
+            font-family: inherit;
+            height: 4em;
+            padding: 0 1em;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            color: white;
+            background: var(--graydarker);
+            border-radius: .2em;
+        }
+
+        .heart {
+            background: var(--redheart);
+            padding: 0 1em;
+            i {
+                margin-top: .15em;
+            }
+            span {
+                margin-left: .5em;
+                margin-top: -.5em;
+                font-weight: lighter;
+            }
+        }
+
+        .right {
+            background: var(--yellowbutton);
+        }
+
+        button:hover {
+            background: var(--graydarkest);
+        }
+
+        .heart:hover {
+            background: #ec2a14;
+        }
+
+        .right:hover {
+            background: #ffb30e;
+        }
+    }
+
+}
+
+
+.show-more-details {
+    background-color: rgb(201, 198, 198);
+    font-size: smaller;
+    margin-bottom: 2em;
+    margin-left: .5em;
+    margin-right: .5em;
+
+
+    .table-row {
+        
+        td {
+            padding: 1em 0;
+            padding-left: 1em;
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+    
+    tr:nth-child(even){
+        background-color: white;
+    }
+    
+}
+
+@media screen and (min-width: 600px) {
+    .carousell {
+        margin: 2em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 32em;
+    }
+
+    .makeitfullsize {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 730px){
+    .name {
+        margin-left: 4em;
+    }
+
+    .show-more-details {
+        margin-left: 4em;
+        margin-right: 3em;
+    }
+}
+
+@media screen and (min-width: 900px){ 
+    .carousell {
+        margin-left: 1em;
+        width: 35em;
+        .carousel-item {
+            height: var(--heightsizepz);
+        }
+        
+    }
+
+    .makeitfullsize {
+        width: 100%;
+        margin: 0;
+        padding-top: 2em;
+        .carousel-item {
+            padding-top: 0;
+            height: var(--heightzoomedsizepz);
+        }
+        
+    }
+
+    .name {
+        position: absolute;
+        top: 0;
+        margin-left: 38em;
+        margin-top: 9em;
+
+        .buttons {
+            button {
+                height: 3.5em;
+            }
+            
+        }
+    }
+
+    .show-more-details {
+        margin-top: 18em;
+        margin-left: 1em;
+        width: 550px;
+    }
+
+    
+}
+
+@media screen and (min-width: 1025px) {
+
+    .name {
+        margin-right: 3em;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+
+    .name {
+        width: 400px;
+        margin-left: 42em;
+    }
+    
+}
+

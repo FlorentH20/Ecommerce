@@ -1,0 +1,56 @@
+
+
+
+.track {
+    text-align: center;
+    h3 {
+        margin-top: 3em;
+        text-align: center;
+    }
+
+    .larti {
+        i {
+            color: black;
+        }
+    }
+
+    form {
+        display: inline-block;
+    }
+    .forma {
+        display:flex;
+        margin-bottom: 1em;
+        margin-top: 2em;
+        border: 1px solid black;
+        border-radius: .1em;
+        input {
+            font-size: larger;
+            outline: none;
+            padding-left: .5em;
+            height: 1.5em;
+            border: none;
+        }
+        button {
+            background: none;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover{
+            background: rgba(255, 255, 255, 0);
+        }
+        i {
+            color: black;
+        }
+        .fa-hashtag {
+            color: rgba(0, 123, 255, 0.775);
+            margin-top: .5em;
+            margin-left: .5em;
+        }
+    }
+
+    .informacionet {
+        margin-bottom: 3em;
+    }
+
+
+}
